@@ -16,6 +16,7 @@ The address for backend_2 should be stored in the parameter store under the key 
 # backend_2
 This backend was developed in node.js.
 It should not be available from the internet and only backend_1 should be able to communicate with it.
+This backend access dynamoDB and gets the list of all tables
 >install command: **npm install**
 >run command: **node index.js**
 
