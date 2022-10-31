@@ -39,7 +39,7 @@ public class Backend1Application {
 
 		String value = getValueFromParamStore();
 
-		String result = callBackend2("http://localhost:1234/");
+		String result = callBackend2(value);
 
 		return ResponseEntity.ok().headers(headers).body(result);
 	}

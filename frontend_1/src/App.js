@@ -8,7 +8,7 @@ function App() {
   const [result, setResult] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/check")
+    fetch("/api/check")
       .then(res => res.json())
       .then(
         (apiResult) => {
