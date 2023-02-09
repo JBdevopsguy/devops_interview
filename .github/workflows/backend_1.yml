@@ -1,0 +1,26 @@
+name: backend_1 CI
+
+on:
+  push:
+    branches: '**'
+    paths:
+      - 'backend_1/**'
+  pull_request: 
+    branches: [ "main", "dev" ]
+    paths:
+      - 'backend_1/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        working-directory: ./backend_1
+        run: mvn install

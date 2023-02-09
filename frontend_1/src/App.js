@@ -3,7 +3,7 @@ import loader from './loader.svg';
 import './App.css';
 
 function App() {
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [result, setResult] = useState([]);
 
