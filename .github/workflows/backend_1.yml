@@ -1,6 +1,14 @@
 name: backend_1 CI
 
-on: [push]
+on:
+  push:
+    branches: '**'
+    paths:
+      - './backend_1'
+  pull_request: 
+    branches: [ "main", "dev" ]
+    paths:
+      - './backend_1'
 
 jobs:
   build:
