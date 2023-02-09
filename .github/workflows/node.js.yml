@@ -27,6 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - working-directory: ./frontend_1
-    - run: npm install
-    - run: npm run build
+    - name: install
+      run: npm install
+    - name: build
+      run: npm run build
 
