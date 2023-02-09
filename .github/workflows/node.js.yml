@@ -5,7 +5,9 @@ name: Node.js CI
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
+    paths:
+      - './frontend_1'
 
 jobs:
   build:
@@ -24,7 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - working-directory: ./frontend_1
-    - run: npm install
-    - run: npm run build
+    - name: install
+      working-directory: ./frontend_1
+      run: npm install
+    - name: build
+      working-directory: ./frontend_1
+      run: npm run build
 
